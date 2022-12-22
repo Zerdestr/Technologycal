@@ -1,0 +1,121 @@
+.hero {
+  padding-top: 147px;
+
+  @media (max-width: 991px) {
+    padding-top: 117px;
+    margin-bottom: 170px;
+  }
+
+  @media (max-width: 756px) {
+    padding-top: 87px;
+    margin-bottom: 130px;
+  }
+
+  @media (max-width: 567px) {
+    padding-top: 67px;
+    margin-bottom: 70px;
+  }
+
+  &__wrapper {
+    max-width: 1720px;
+    padding: 148px 0 138px;
+    margin: 0 auto;
+    background-image: url("../img/top-bg.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 1720px 868px;
+    text-align: center;
+
+    @media (max-width: 991px) {
+      padding: 120px 0 0;
+    }
+
+    @media (max-width: 756px) {
+      padding: 100px 0 0;
+    }
+
+    @media (max-width: 567px) {
+      padding: 80px 0 0;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 1.1;
+    color: $white;
+    margin-bottom: 15px;
+    max-width: 1075px;
+
+    @media (max-width: 991px) {
+      font-size: 50px;
+    }
+
+    @media (max-width: 756px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 567px) {
+      font-size: 30px;
+    }
+  }
+
+  &__text {
+    font-weight: 600;
+    color: $white;
+    margin-bottom: 44px;
+    max-width: 700px;
+  }
+
+  &__button {
+    background-color: $white;
+    color: $dark;
+    display: inline-block;
+    margin-bottom: 57px;
+  }
+
+  &__image {
+    max-width: 1400px;
+    max-height: 551px;
+    position: relative;
+
+    img {
+      object-fit: cover;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      opacity: 0.5;
+      filter: blur(100px);
+      bottom: -7%;
+      z-index: -1;
+    }
+
+    &::before {
+      left: 0;
+      width: 63%;
+      height: 14%;
+      background: $blue;
+    }
+
+    &::after {
+      background: $violet;
+      opacity: 0.5;
+      right: 0;
+      width: 58%;
+      height: 12%;
+    }
+
+    @media (max-width: 991px) {
+      margin-bottom: -10%;
+    }
+  }
+}

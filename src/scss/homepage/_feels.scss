@@ -1,0 +1,136 @@
+.feels {
+  margin-bottom: 180px;
+
+  @media (max-width: 991px) {
+    margin-bottom: 150px;
+  }
+
+  @media (max-width: 756px) {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: 567px) {
+    margin-bottom: 70px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 15px;
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+      row-gap: 40px;
+    }
+  }
+
+  &__content {
+    min-width: 38%;
+  }
+
+  &__title {
+    max-width: 347px;
+    margin-bottom: 31px;
+
+    @media (max-width: 991px) {
+      max-width: 100%;
+    }
+
+    @media (max-width: 756px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 38px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 756px) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 53px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 756px) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__item {
+    color: $dark;
+    position: relative;
+    padding-left: 33px;
+
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24.5px;
+      height: 24.5px;
+      background-image: url("../img/icons/icons.svg#check-circle");
+    }
+  }
+
+  &__image {
+    max-width: 58%;
+    position: relative;
+    padding-top: 2.5%;
+
+    img {
+      max-width: 817px;
+      filter: drop-shadow(0px 32px 50px rgba(194, 194, 194, 0.25));
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+    }
+
+    &::before {
+      top: 0;
+      right: -19%;
+      background-image: url("../img/feels-image-decor.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 51%;
+      height: 47%;
+    }
+
+    &::after {
+      right: -7%;
+      bottom: 9%;
+      background: $violet;
+      opacity: 0.5;
+      filter: blur(100px);
+      width: 21%;
+      height: 11%;
+    }
+
+    @media (max-width: 991px) {
+      max-width: 100%;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

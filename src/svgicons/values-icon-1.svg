@@ -1,0 +1,22 @@
+<svg width="74" height="74" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="64" height="64" rx="15" transform="matrix(1 0 0 -1 0 64)" fill="url(#paint0_linear_1_814)"/>
+<g filter="url(#filter0_b_1_814)">
+<rect width="64" height="64" rx="15" transform="matrix(1 0 0 -1 10 74)" fill="#EEEEEE" fill-opacity="0.61"/>
+<rect x="0.5" y="-0.5" width="63" height="63" rx="14.5" transform="matrix(1 0 0 -1 10 73)" stroke="white"/>
+</g>
+<path d="M35.4729 48.1788C33.2888 46.7614 31.6232 44.6741 30.726 42.23C29.8287 39.7859 29.7481 37.1168 30.4962 34.623C31.2444 32.1292 32.781 29.9452 34.8755 28.3987C36.97 26.8521 39.5095 26.0264 42.1131 26.0454C44.7166 26.0644 47.2438 26.9271 49.3156 28.504C51.3873 30.0809 52.8919 32.2871 53.6036 34.7915C54.3153 37.296 54.1957 39.9637 53.2629 42.3944C52.33 44.8252 50.6342 46.888 48.4297 48.2733" stroke="#5956E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="37" y1="52" x2="47" y2="52" stroke="#5956E9" stroke-width="2" stroke-linecap="round"/>
+<path d="M37.6094 54.9645C37.0571 54.9645 36.5986 55.4174 36.7187 55.9565C36.9317 56.913 37.4499 57.7997 38.2203 58.5C39.2517 59.4377 40.6507 59.9645 42.1094 59.9645C43.5681 59.9645 44.967 59.4377 45.9985 58.5C46.7688 57.7997 47.2871 56.913 47.5001 55.9565C47.6201 55.4174 47.1617 54.9645 46.6094 54.9645L42.1094 54.9645L37.6094 54.9645Z" fill="#5956E9"/>
+<defs>
+<filter id="filter0_b_1_814" x="2" y="2" width="80" height="80" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="4"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1_814"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1_814" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_1_814" x1="32" y1="0" x2="32" y2="64" gradientUnits="userSpaceOnUse">
+<stop stop-color="#807DFF"/>
+<stop offset="1" stop-color="#BAB9FF" stop-opacity="0.34"/>
+</linearGradient>
+</defs>
+</svg>
