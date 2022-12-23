@@ -2,46 +2,27 @@
 
 // flsFunctions.isWebp();
 
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation } from 'swiper';
 
-// const Swiper = new Swiper('.__swiper', {
+const swiperFamily = new Swiper('.swiper-family', {
 
-//   direction: 'horizontal',
-//   modules: [Autoplay],
-//   loop: true,
-//   autoplay: {
-//     delay: 3000,
-//   },
-//   speed: 500,
+  direction: 'horizontal',
+  modules: [Navigation],
+  loop: true,
+  autoplay: {
+    delay: 3000,
+  },
+  speed: 500,
+  spaceBetween: 20,
 
-//   wrapperClass: '__wrppper',
-//   slideClass: '__slide',
-//   slideActiveClass: '__slide--active',
-//   slideDuplicateActiveClass: '__slide-duplicate--active',
-//   slideDuplicateClass: '__slide-duplicate',
-//   centeredSlides: true,
-//   loopedSlides: 3,
+  wrapperClass: 'swiper-family__wrapper',
+  slideClass: 'swiper-family__slide',
 
-//   breakpoints: {
-
-//     320: {
-//       slidesPerView: 1,
-//       spaceBetween: 20,
-//       centeredSlides: false,
-//     },
-
-//     567: {
-//       slidesPerView: 2,
-//       spaceBetween: 30,
-//     },
-
-//     1200: {
-//       slidesPerView: 3,
-//       spaceBetween: 30
-//     }
-//   },
-
-// });
+  navigation: {
+    nextEl: '.swiper-family__next',
+    prevEl: '.swiper-family__prev',
+  },
+});
 
 let header = document.querySelector('.header')
 
