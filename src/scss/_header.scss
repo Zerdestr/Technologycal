@@ -60,34 +60,6 @@
     }
   }
 
-  &__logo {
-    max-width: 268px;
-    max-height: 38px;
-
-    &:focus {
-      outline: 2px solid $lilac;
-      border-radius: 10px;
-    }
-
-    @media (max-width: 991px) {
-      margin-right: auto;
-    }
-  }
-
-  &__logo-image {
-    @media (max-width: 567px) {
-      display: none;
-    }
-  }
-
-  &__logo-phone {
-    display: none;
-
-    @media (max-width: 567px) {
-      display: block;
-    }
-  }
-
   &__list {
     display: flex;
     column-gap: 60px;

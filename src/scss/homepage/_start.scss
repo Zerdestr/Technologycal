@@ -1,0 +1,139 @@
+.start {
+  padding: 100px 0;
+  margin-bottom: 65px;
+
+  @media (max-width: 991px) {
+    padding: 0;
+    margin-bottom: 130px;
+  }
+
+  @media (max-width: 756px) {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: 567px) {
+    margin-bottom: 70px;
+  }
+
+  &__content {
+    background-image: url("../img/start-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 135px 70px;
+    color: $white;
+
+    @media (max-width: 991px) {
+      padding: 105px 70px;
+    }
+
+    @media (max-width: 756px) {
+      padding: 70px 50px;
+    }
+
+    @media (max-width: 567px) {
+      padding: 30px 15px;
+    }
+  }
+
+  &__title {
+    color: $white;
+    margin-bottom: 13px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    margin-bottom: 40px;
+    position: relative;
+    max-width: max-content;
+    max-width: 497px;
+    width: 100%;
+
+    @media (max-width: 756px) {
+      max-width: 100%;
+    }
+  }
+
+  &__input {
+    padding: 27px 29px;
+    border-radius: 50px;
+    width: 100%;
+
+    &::placeholder {
+      color: $dark;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 567px) {
+      padding: 20px 20px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $dark;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.45;
+    padding: 19px 45px;
+    border-radius: 50px;
+
+    @media (max-width: 567px) {
+      padding: 13px 25px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 645px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 31px;
+    font-weight: 700;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url("../img/icons/icons.svg#circle-with-dot");
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 748px;
+    right: 13px;
+    max-width: 45%;
+    z-index: 1;
+
+    img {
+      max-width: 639px;
+    }
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+}
