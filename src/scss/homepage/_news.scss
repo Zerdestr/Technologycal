@@ -1,6 +1,19 @@
 .news {
   margin-bottom: 149px;
 
+  @media (max-width: 991px) {
+    padding: 0;
+    margin-bottom: 130px;
+  }
+
+  @media (max-width: 756px) {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: 567px) {
+    margin-bottom: 70px;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -39,108 +52,6 @@
     @media (max-width: 991px) {
       flex-direction: column;
       row-gap: 40px;
-    }
-  }
-}
-
-.article-news {
-  max-width: 436px;
-  width: 100%;
-
-  @media (max-width: 991px) {
-    max-width: 100%;
-  }
-
-  &__image {
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-
-    img {
-      object-fit: contain;
-      width: 100%;
-      max-height: 370px;
-
-      @media (max-width: 991px) {
-        object-fit: cover;
-      }
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      background: linear-gradient(180deg, rgba($color: $dark, $alpha: 0) 0%, $dark 100%);
-      background-blend-mode: multiply;
-      z-index: 1;
-    }
-  }
-
-  &__tags {
-    position: absolute;
-    bottom: 20px;
-    left: 22px;
-    display: flex;
-    gap: 15px;
-    z-index: 2;
-    flex-wrap: wrap;
-  }
-
-  &__tag {
-    background-color: $white;
-    padding: 14px 45px;
-    border-radius: 24px;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 1.27;
-    color: $dark;
-    transition: color 0.2s ease-in-out;
-
-    &:hover {
-      color: $blue;
-    }
-
-    @media (max-width: 567px) {
-      padding: 10px 20px;
-    }
-  }
-
-  &__info {
-    display: flex;
-    justify-content: space-between;
-    padding: 25px 0;
-    border-bottom: 1px solid $grey-border;
-    margin-bottom: 18px;
-  }
-
-  &__title {
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 1.2;
-    color: $dark;
-    margin-bottom: 30px;
-
-    @include line-clamp(2);
-  }
-
-  &__text {
-    margin-bottom: 17px;
-
-    @include line-clamp(4);
-  }
-
-  &__link {
-    color: $dark;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.45;
-    transition: color 0.2s ease-in-out;
-
-    &:hover {
-      color: $blue;
     }
   }
 }

@@ -7,6 +7,29 @@
     border-bottom: 1px solid $grey-border;
     border-top: 1px solid $grey-border;
     margin-bottom: 69px;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    @media (max-width: 991px) {
+      padding: 60px 0;
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 756px) {
+      padding: 40px 0;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 567px) {
+      padding: 30px 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__top-button {
+    background-color: $white;
+    color: $dark;
+    border: 1px solid $grey-border;
   }
 
   &__copy {
@@ -14,6 +37,11 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 31px;
+    gap: 20px;
+
+    @media (max-width: 567px) {
+      flex-wrap: wrap;
+    }
   }
 
   &__copy-text {
@@ -28,6 +56,10 @@
   &__social {
     display: flex;
     column-gap: 20px;
+
+    @media (max-width: 567px) {
+      margin-left: auto;
+    }
   }
 
   &__social-link {
@@ -44,9 +76,17 @@
 .content-footer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding-bottom: 69px;
   border-bottom: 1px solid $grey-border;
   margin-bottom: 31px;
+  column-gap: 15px;
+  row-gap: 30px;
+
+  @media (max-width: 1340px) {
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+  }
 
   &__left {
     display: flex;
@@ -55,6 +95,21 @@
     border-right: 1px solid $grey-border;
     padding: 0 56px 35px 0;
     width: 100%;
+    column-gap: 15px;
+
+    @media (max-width: 1340px) {
+      padding: 0 0 35px 0;
+      border-right: none;
+      max-width: 100%;
+      justify-content: space-evenly;
+    }
+
+    @media (max-width: 567px) {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+      padding-bottom: 0;
+    }
   }
 
   &__left-title {
@@ -63,17 +118,26 @@
     font-size: 25px;
     line-height: 1.24;
     color: $dark;
+
+    @media (max-width: 567px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__list {
     display: grid;
 
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-auto-flow: column;
 
     &--two-coll {
       grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(7, 1fr);
       column-gap: 85px;
+
+      @media (max-width: 756px) {
+        column-gap: 15px;
+      }
     }
   }
 
@@ -84,11 +148,17 @@
     &:hover {
       color: $blue;
     }
+
+    &--active {
+      &:hover {
+        color: inherit;
+      }
+    }
   }
 }
 
 .content-right {
-  max-width: 44%;
+  max-width: 612px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -96,10 +166,27 @@
   background-color: $dark;
   border-radius: 20px;
   color: $white;
+  gap: 20px;
+
+  @media (max-width: 567px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
 
   &__popular {
     border-right: 1px solid $grey-border;
     padding-right: 34px;
+    width: 100%;
+    max-width: 254px;
+
+    @media (max-width: 567px) {
+      border-right: none;
+      border-bottom: 1px solid $grey-border;
+      padding: 0 0 20px 0;
+      text-align: center;
+      max-width: 100%;
+    }
   }
 
   &__title {
@@ -111,6 +198,11 @@
     background-image: url("../img/content-right-title-bg.png");
     background-repeat: no-repeat;
     background-size: contain;
+    display: inline-block;
+
+    @media (max-width: 567px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__cost {
@@ -123,16 +215,28 @@
       font-weight: 900;
       font-size: 60px;
       line-height: 1.25;
+
+      @media (max-width: 567px) {
+        font-size: 40px;
+      }
     }
   }
 
   &__button {
     padding: 25px 36px;
     background-color: $dark-light;
+
+    @media (max-width: 567px) {
+      padding: 15px 25px;
+    }
   }
 
   &__plan {
     padding: 30px 0;
+
+    @media (max-width: 567px) {
+      padding: 15px 0;
+    }
   }
 
   &__item {
@@ -149,8 +253,7 @@
       content: "";
       position: absolute;
       left: 0;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 13px;
       background-image: url("../img/icons/icons.svg#check");
       height: 13px;
       width: 15px;

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/_head.html', {
+"title":"Technologycal | About Us"
+})
+
+<body>
+
+  <div class="wrapper">
+    @@include('html/_header.html',{
+    "hrefHome": "href='index.html'",
+    "hrefFetures": "href='features.html'",
+    "hrefBlog": "href='blog.html'",
+    "hrefPricing": "href='pricing.html'",
+    "hrefResources": "href='resources.html'",
+    "homeItemActive": '',
+    "feturesItemActive": '',
+    "pricingItemActive": '',
+    "resourcesItemActive": '',
+    "blogItemActive": '',
+    })
+    <main>
+
+      @@include('html/about/_about-banner.html',{})
+      @@include('html/about/_about.html',{})
+      @@include('html/about/_counter.html',{})
+      @@include('html/about/_mission.html',{})
+      @@include('html/about/_values.html',{})
+      @@include('html/about/_team.html',{})
+      @@include('html/about/_investors.html',{})
+
+    </main>
+    @@include('html/_footer.html',{
+    "hrefHome": "href='index.html'",
+    "hrefAbout": "",
+    "hrefContact": "href='contact.html'",
+    "hrefBlog": "href='blog.html'",
+    "hrefBlogPost": "href='blog-single.html'",
+    "hrefPricing": "href='pricing.html'",
+    "hrefPricingSingle": "href='pricing-single.html'",
+    "hrefCareers": "href='careers.html'",
+    "hrefWhyChooseUs": "href='why-choose-us.html'",
+    "hrefCaseStudies": "href='case-study.html'",
+    "hrefPasswordProtected": "href='password-protected.html'",
+    "404": "href='404.html'",
+    "Licenses": "href='licenses.html'",
+    "Changelog": "href='changelog.html'",
+    })
+
+  </div>
+
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

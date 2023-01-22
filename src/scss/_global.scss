@@ -1,3 +1,40 @@
+@mixin line-clamp($lines: 1) {
+  @if $lines <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+
+$maxWidth: 1920;
+$maxWidthContainer: 1400;
+
+@mixin adaptiv-valie($property, $startSize, $minSize, $type) {
+  $addSize: $startSize - $minSize;
+  @if $type==1 {
+    // Только если меньше контейнера
+    #{$property}: $startSize + px;
+    @media (max-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+    }
+  } @else if $type==2 {
+    // Только если больше контейнера
+    #{$property}: $startSize + px;
+    @media (min-width: #{$maxWidthContainer + px}) {
+      #{$property}: call(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+    }
+  } @else {
+    //Всегда
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+  }
+}
+
 body {
   color: $body;
   font-family: "Mulish", sans-serif;
@@ -151,39 +188,357 @@ main {
   }
 }
 
-@mixin line-clamp($lines: 1) {
-  @if $lines <=1 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  } @else {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: $lines;
-    -webkit-box-orient: vertical;
+.banner {
+  padding-top: 147px;
+
+  @media (max-width: 991px) {
+    padding-top: 117px;
+    margin-bottom: 170px;
+  }
+
+  @media (max-width: 756px) {
+    padding-top: 87px;
+    margin-bottom: 130px;
+  }
+
+  @media (max-width: 567px) {
+    padding-top: 67px;
+    margin-bottom: 70px;
+  }
+
+  &__wrapper {
+    max-width: 1720px;
+    margin: 0 auto;
+    background-image: url("../img/top-bg.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    background-size: 1720px 868px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 129px 15px;
+
+    @media (max-width: 991px) {
+      padding: 100px 15px;
+    }
+
+    @media (max-width: 756px) {
+      padding: 80px 15px;
+    }
+
+    @media (max-width: 567px) {
+      padding: 60px 15px;
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 1.1;
+    color: $white;
+    margin-bottom: 18px;
+
+    @media (max-width: 991px) {
+      font-size: 50px;
+    }
+
+    @media (max-width: 756px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 567px) {
+      font-size: 30px;
+    }
+  }
+
+  &__text {
+    font-weight: 600;
+    color: $white;
+    max-width: 465px;
+    margin: 0 auto;
   }
 }
 
-$maxWidth: 1920;
-$maxWidthContainer: 1400;
+.points {
+  max-width: 482px;
+  display: flex;
+  gap: 27px;
+  flex-direction: column;
 
-@mixin adaptiv-valie($property, $startSize, $minSize, $type) {
-  $addSize: $startSize - $minSize;
-  @if $type==1 {
-    // Только если меньше контейнера
-    #{$property}: $startSize + px;
-    @media (max-width: #{$maxWidthContainer + px}) {
-      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+  @media (max-width: 991px) {
+    max-width: 100%;
+    flex-direction: row;
+  }
+
+  @media (max-width: 756px) {
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    max-width: 482px;
+  }
+
+  @media (max-width: 991px) {
+    align-items: flex-start;
+  }
+
+  @media (max-width: 756px) {
+    align-items: center;
+  }
+
+  &__icon {
+    max-width: 110px;
+    width: 100%;
+    height: 113px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $grey-light;
+    border-radius: 20px;
+    margin-right: 22px;
+
+    img {
+      object-fit: cover;
     }
-  } @else if $type==2 {
-    // Только если больше контейнера
-    #{$property}: $startSize + px;
-    @media (min-width: #{$maxWidthContainer + px}) {
-      #{$property}: call(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+
+    @media (max-width: 756px) {
+      max-width: 70px;
+      width: 100%;
+      height: 70px;
     }
-  } @else {
-    //Всегда
-    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 110%;
+    color: $dark;
+    margin-bottom: 8px;
+
+    @media (max-width: 756px) {
+      font-size: 25px;
+    }
+
+    @media (max-width: 568px) {
+      font-size: 20px;
+    }
+  }
+}
+
+.swiper-standart {
+  position: relative;
+  color: $dark;
+  overflow: hidden;
+  text-align: center;
+
+  &__wrapper {
+    display: flex;
+    transition-property: transform;
+  }
+
+  &__slide {
+    flex-shrink: 0;
+  }
+
+  &__content {
+    max-width: 845px;
+    margin: 0 auto;
+  }
+
+  &__photo {
+    width: 143px;
+    height: 143px;
+    margin: 0 auto 35px;
+    position: relative;
+
+    img {
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 55px;
+      height: 55px;
+      bottom: 1px;
+      left: -21px;
+      background-color: $lilac;
+      border-radius: 50%;
+      background-image: url("../img/icons/icons.svg#quotation-marks");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 23px;
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    line-height: 1.1;
+
+    margin-bottom: 10px;
+  }
+
+  &__job {
+    font-weight: 400;
+  }
+
+  &__symbol {
+    position: absolute;
+  }
+
+  &__next,
+  &__prev {
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    background-color: $white;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $lilac;
+
+      .swiper-standart__icon {
+        color: $white;
+      }
+    }
+
+    @media (max-width: 991px) {
+      top: 25%;
+    }
+
+    @media (max-width: 567px) {
+      display: none;
+    }
+  }
+
+  &__next {
+    right: 0;
+  }
+
+  &__prev {
+    left: 0;
+
+    .swiper-standart__icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__icon {
+    color: $dark;
+    font-size: 20px;
+    transition: color 0.2s ease-in-out;
+  }
+}
+
+.article-news {
+  max-width: 436px;
+  width: 100%;
+
+  @media (max-width: 991px) {
+    max-width: 100%;
+  }
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+
+    img {
+      object-fit: contain;
+      width: 100%;
+      max-height: 370px;
+
+      @media (max-width: 991px) {
+        object-fit: cover;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(180deg, rgba($color: $dark, $alpha: 0) 0%, $dark 100%);
+      background-blend-mode: multiply;
+      z-index: 1;
+    }
+  }
+
+  &__tags {
+    position: absolute;
+    bottom: 20px;
+    left: 22px;
+    display: flex;
+    gap: 15px;
+    z-index: 2;
+    flex-wrap: wrap;
+  }
+
+  &__tag {
+    background-color: $white;
+    padding: 14px 45px;
+    border-radius: 24px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.27;
+    color: $dark;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $blue;
+    }
+
+    @media (max-width: 567px) {
+      padding: 10px 20px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    border-bottom: 1px solid $grey-border;
+    margin-bottom: 18px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.2;
+    color: $dark;
+    margin-bottom: 30px;
+
+    @include line-clamp(2);
+  }
+
+  &__text {
+    margin-bottom: 17px;
+
+    @include line-clamp(4);
+  }
+
+  &__link {
+    color: $dark;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.45;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $blue;
+    }
   }
 }

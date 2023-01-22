@@ -7,11 +7,12 @@
 @import "_burger";
 
 @import "_header";
+@import "_footer";
 
 @import "homepage/_hero";
 @import "homepage/_client-logo";
 @import "homepage/_feels";
-@import "homepage/_features";
+@import "homepage/_home-features";
 @import "homepage/_video";
 @import "homepage/_connect";
 @import "homepage/_working-process";
@@ -19,4 +20,30 @@
 @import "homepage/_news";
 @import "homepage/_start";
 
-@import "_footer";
+@import "about/_about-banner";
+@import "about/_about";
+@import "about/_mission";
+@import "about/_values";
+@import "about/_team";
+@import "about/_investors";
+
+@import "features/_features-banner";
+@import "features/_features";
+@import "features/_features-family";
+
+@import "blog/_blog-banner";
+@import "blog/_blog";
+
+@import "blog-single/_blog-single-banner";
+@import "blog-single/_article";
+
+@import "pricing/_pricing-banner";
+@import "pricing/_price";
+@import "pricing/_security";
+@import "pricing/_pricing-table";
+
+@import "case-study/_case-study-banner";
+@import "case-study/_case-study";
+
+@import "case-study-single/_case-study-single-banner";
+@import "case-study-single/_case-study-single";

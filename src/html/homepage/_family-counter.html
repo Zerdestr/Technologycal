@@ -7,24 +7,118 @@
         Our Happy Family
       </h2>
 
-      <div class="family__swiper swiper-family">
+      <div class="family__swiper swiper-family swiper-standart">
 
-        <div class="swiper-family__wrapper">
+        <div class="swiper-standart__wrapper swiper-family__wrapper">
 
-          <div class="swiper-family__slide">
-            <div class="swiper-family__content">
+          <div class="swiper-standart__slide swiper-family__slide">
+            <div class="swiper-standart__content">
 
-              <div class="swiper-family__photo">
+              <div class="swiper-standart__photo">
                 <img src="@img/swiper-family-item-photo.png" alt="Photo  Mick G.">
               </div>
 
-              <h3 class="swiper-family__title">Mick G.,
-                <span class="swiper-family__job">Head of Sales and Marketing</span>
+              <h3 class="swiper-standart__title">Mick G.,
+                <span class="swiper-standart__job">Head of Sales and Marketing</span>
               </h3>
 
-              <div class="swiper-family__rating"></div>
+              <div class="swiper-standart__rating">
 
-              <div class="swiper-family__text">
+                <div class="swiper-standart__symbol">
+                  <svg style="width: 0; height: 0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23">
+                    <defs>
+                      <mask id="half">
+                        <rect x="0" y="0" width="23" height="23" fill="white" />
+                        <rect x="50%" y="0" width="23" height="23" fill="#000" />
+                      </mask>
+
+                      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" id="star">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M11.6199 4.84471L10.6033 7.97339C10.2017 9.20946 9.04983 10.0463 7.75015 10.0463H4.46046L7.12187 11.98C8.17333 12.7439 8.61331 14.098 8.21169 15.3341L7.19512 18.4627L9.85653 16.5291C10.908 15.7652 12.3318 15.7652 13.3832 16.5291L16.0447 18.4627L15.0281 15.3341C14.6265 14.098 15.0664 12.7439 16.1179 11.98L18.7793 10.0463H15.4896C14.1899 10.0463 13.0381 9.20946 12.6365 7.97339L11.6199 4.84471ZM12.5709 1.29963C12.2716 0.378316 10.9682 0.378314 10.6688 1.29962L8.7012 7.35535C8.56733 7.76738 8.18337 8.04634 7.75015 8.04634H1.38278C0.414054 8.04634 0.011277 9.28595 0.794991 9.85535L5.9463 13.598C6.29679 13.8526 6.44345 14.304 6.30957 14.716L4.34195 20.7718C4.0426 21.6931 5.09707 22.4592 5.88079 21.8898L11.0321 18.1472C11.3826 17.8925 11.8572 17.8925 12.2077 18.1472L17.359 21.8898C18.1427 22.4592 19.1972 21.6931 18.8978 20.7718L16.9302 14.716C16.7963 14.304 16.943 13.8526 17.2935 13.598L22.4448 9.85535C23.2285 9.28595 22.8257 8.04634 21.857 8.04634H15.4896C15.0564 8.04634 14.6724 7.76738 14.5386 7.35535L12.5709 1.29963Z" />
+                      </symbol>
+
+                      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" id="star-full">
+                        <path
+                          d="M10.6688 1.29962C10.9682 0.378314 12.2716 0.378316 12.5709 1.29963L14.5386 7.35535C14.6724 7.76738 15.0564 8.04634 15.4896 8.04634H21.857C22.8257 8.04634 23.2285 9.28595 22.4448 9.85535L17.2935 13.598C16.943 13.8526 16.7963 14.304 16.9302 14.716L18.8978 20.7718C19.1972 21.6931 18.1427 22.4592 17.359 21.8898L12.2077 18.1472C11.8572 17.8925 11.3826 17.8925 11.0321 18.1472L5.88079 21.8898C5.09707 22.4592 4.0426 21.6931 4.34195 20.7718L6.30957 14.716C6.44345 14.304 6.29679 13.8526 5.9463 13.598L0.794991 9.85535C0.011277 9.28595 0.414054 8.04634 1.38278 8.04634H7.75015C8.18337 8.04634 8.56733 7.76738 8.7012 7.35535L10.6688 1.29962Z" />
+                      </symbol>
+                    </defs>
+                  </svg>
+                </div>
+
+
+                <p class="swiper-standart__star-rating star-rating" aria-label="4.5 stars out of 5">
+                  <svg class="star-rating__star" width="23" height="23" viewBox="0 0 23 23">
+                    <use xlink:href="#star-full"></use>
+                    <use xlink:href="#star"></use>
+                  </svg>
+                  <svg class="star-rating__star" width="23" height="23" viewBox="0 0 23 23">
+                    <use xlink:href="#star-full"></use>
+                    <use xlink:href="#star"></use>
+                  </svg>
+                  <svg class="star-rating__star" width="23" height="23" viewBox="0 0 23 23">
+                    <use xlink:href="#star-full"></use>
+                    <use xlink:href="#star"></use>
+                  </svg>
+                  <svg class="star-rating__star" width="23" height="23" viewBox="0 0 23 23">
+                    <use xlink:href="#star-full"></use>
+                    <use xlink:href="#star"></use>
+                  </svg>
+                  <svg class="star-rating__star" width="23" height="23" viewBox="0 0 23 23">..
+                    <use xlink:href="#star-full" mask=url("#half")></use>
+                    <use xlink:href="#star"></use>
+                  </svg>
+                </p>
+
+              </div>
+
+              <div class=" swiper-standart__text">
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                  the
+                  industry's standard
+                  dummy text ever since the when an unknown printer took a galley of type and scrambled it to make
+                  a
+                  type
+                  specimen book.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-standart__slide swiper-family__slide">
+            <div class="swiper-standart__content">
+
+              <div class="swiper-standart__photo">
+                <img src="@img/swiper-family-item-photo.png" alt="Photo  Mick G.">
+              </div>
+
+              <h3 class="swiper-standart__title">Mick G.,
+                <span class="swiper-standart__job">Head of Sales and Marketing</span>
+              </h3>
+
+              <p class="swiper-standart__star-rating star-rating" aria-label="4 stars out of 5">
+                <svg class="star-rating__star" width="23" height="23" viewBox="0 0 23 23">
+                  <use xlink:href="#star-full"></use>
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star-rating__star" width="23" height="23" viewBox="0 0 23 23">
+                  <use xlink:href="#star-full"></use>
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star-rating__star" width="23" height="23" viewBox="0 0 23 23">
+                  <use xlink:href="#star-full"></use>
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star-rating__star" width="23" height="23" viewBox="0 0 23 23">
+                  <use xlink:href="#star-full"></use>
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star-rating__star" width="23" height="23" viewBox="0 0 23 23">
+                  <use xlink:href="#star"></use>
+                </svg>
+              </p>
+
+              <div class="swiper-standart__text">
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                   industry's standard
@@ -36,45 +130,40 @@
             </div>
           </div>
 
-          <div class="swiper-family__slide">
-            <div class="swiper-family__content">
+          <div class="swiper-standart__slide swiper-family__slide">
+            <div class="swiper-standart__content">
 
-              <div class="swiper-family__photo">
+              <div class="swiper-standart__photo">
                 <img src="@img/swiper-family-item-photo.png" alt="Photo  Mick G.">
               </div>
 
-              <h3 class="swiper-family__title">Mick G.,
-                <span class="swiper-family__job">Head of Sales and Marketing</span>
+              <h3 class="swiper-standart__title">Mick G.,
+                <span class="swiper-standart__job">Head of Sales and Marketing</span>
               </h3>
 
-              <div class="swiper-family__rating"></div>
+              <p class="swiper-standart__star-rating star-rating" aria-label="3.5 stars out of 5">
+                <svg class="star-rating__star" width="23" height="23" viewBox="0 0 23 23">
+                  <use xlink:href="#star-full"></use>
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star-rating__star" width="23" height="23" viewBox="0 0 23 23">
+                  <use xlink:href="#star-full"></use>
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star-rating__star" width="23" height="23" viewBox="0 0 23 23">
+                  <use xlink:href="#star-full"></use>
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star-rating__star" width="23" height="23" viewBox="0 0 23 23">
+                  <use xlink:href="#star-full" mask=url("#half")></use>
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star-rating__star" width="23" height="23" viewBox="0 0 23 23">
+                  <use xlink:href="#star"></use>
+                </svg>
+              </p>
 
-              <div class="swiper-family__text">
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                  industry's standard
-                  dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a
-                  type
-                  specimen book.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-family__slide">
-            <div class="swiper-family__content">
-
-              <div class="swiper-family__photo">
-                <img src="@img/swiper-family-item-photo.png" alt="Photo  Mick G.">
-              </div>
-
-              <h3 class="swiper-family__title">Mick G.,
-                <span class="swiper-family__job">Head of Sales and Marketing</span>
-              </h3>
-
-              <div class="swiper-family__rating"></div>
-
-              <div class="swiper-family__text">
+              <div class="swiper-standart__text">
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                   industry's standard
@@ -88,11 +177,11 @@
 
         </div>
 
-        <div class="swiper-family__prev">
-          <span class="swiper-family__icon icon-arrow"></span>
+        <div class="swiper-standart__prev swiper-family__prev">
+          <span class="swiper-standart__icon icon-arrow"></span>
         </div>
-        <div class="swiper-family__next">
-          <span class="swiper-family__icon icon-arrow"></span>
+        <div class="swiper-standart__next swiper-family__next">
+          <span class="swiper-standart__icon icon-arrow"></span>
         </div>
       </div>
 

@@ -1,0 +1,15 @@
+.about-banner {
+  margin-bottom: 128px;
+
+  @media (max-width: 991px) {
+    margin-bottom: 110px;
+  }
+
+  @media (max-width: 756px) {
+    margin-bottom: 90px;
+  }
+
+  @media (max-width: 567px) {
+    margin-bottom: 70px;
+  }
+}

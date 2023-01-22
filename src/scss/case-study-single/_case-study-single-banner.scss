@@ -1,0 +1,15 @@
+.case-study-single-banner {
+  margin-bottom: 182px;
+
+  @media (max-width: 991px) {
+    margin-bottom: 130px;
+  }
+
+  @media (max-width: 756px) {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: 567px) {
+    margin-bottom: 70px;
+  }
+}

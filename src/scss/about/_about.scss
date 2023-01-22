@@ -1,0 +1,128 @@
+.about {
+  margin-bottom: 131px;
+
+  @media (max-width: 991px) {
+    margin-bottom: 110px;
+  }
+
+  @media (max-width: 756px) {
+    margin-bottom: 90px;
+  }
+
+  @media (max-width: 567px) {
+    margin-bottom: 70px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 991px) {
+      flex-direction: column-reverse;
+      row-gap: 30px;
+    }
+  }
+
+  &__images {
+    max-width: 51.3%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 991px) {
+      max-width: 100%;
+      align-items: center;
+    }
+  }
+
+  &__photo-top {
+    margin-bottom: 27px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
+  &__images-bottom {
+    display: flex;
+
+    @media (max-width: 568px) {
+      flex-direction: column;
+      width: 100%;
+      row-gap: 27px;
+    }
+  }
+
+  &__users {
+    color: $white;
+    background-color: $lilac;
+    padding: 54px 32px;
+    font-weight: 700;
+    max-width: 258px;
+    border-radius: 20px;
+    margin-right: 29px;
+
+    span {
+      font-weight: 800;
+      font-size: 70px;
+      line-height: 110%;
+    }
+
+    @media (max-width: 568px) {
+      max-width: 100%;
+      margin-right: 0;
+      text-align: center;
+      padding: 30px 15px;
+
+      span {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__photo-bottom {
+    max-width: 60%;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+
+    @media (max-width: 568px) {
+      max-width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 45%;
+
+    @media (max-width: 991px) {
+      max-width: 100%;
+    }
+  }
+
+  .title {
+    margin-bottom: 31px;
+  }
+
+  &__text {
+    padding-bottom: 40px;
+    border-bottom: 1px solid $grey-border;
+    margin-bottom: 30px;
+  }
+
+  .points {
+    margin-bottom: 40px;
+  }
+}

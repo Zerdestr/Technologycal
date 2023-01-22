@@ -24,6 +24,27 @@ const swiperFamily = new Swiper('.swiper-family', {
   },
 });
 
+const swiperFeatures = new Swiper('.features-family__swiper', {
+
+  direction: 'horizontal',
+  modules: [Navigation],
+  loop: true,
+  autoplay: {
+    delay: 3000,
+  },
+  speed: 500,
+  spaceBetween: 20,
+
+  wrapperClass: 'features-family__wrapper',
+  slideClass: 'features-family__slide',
+
+  navigation: {
+    nextEl: '.features-family__next',
+    prevEl: '.features-family__prev',
+  },
+});
+
+
 let header = document.querySelector('.header')
 
 window.addEventListener('scroll', function () {
@@ -69,7 +90,7 @@ function headerDropdawnF(event) {
   }
 };
 
-function close(event) {
+function closeHederItem(event) {
   let target = event.target.closest('.header__item-submenu');
 
   if (!target) {
@@ -81,7 +102,7 @@ function close(event) {
   }
 }
 
-document.addEventListener('click', close);
+document.addEventListener('click', closeHederItem);
 
 // Проверка на мобилу
 
@@ -90,6 +111,18 @@ if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
     headerDropdawnItem.addEventListener('click', headerDropdawnF);
   });
 }
+
+let videoButton = document.querySelector('.video__button');
+let videoVideo = document.querySelector('.video__video');
+
+videoButton.addEventListener('click', function () {
+  let body = document.querySelector('body');
+
+  videoVideo.classList.toggle('video__video--active');
+  body.style.overflow = 'hidden';
+});
+
+
 
 // Обратный отсчет
 

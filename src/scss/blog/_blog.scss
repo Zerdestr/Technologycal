@@ -1,0 +1,23 @@
+.blog {
+  margin-bottom: 91px;
+
+  @media (max-width: 567px) {
+    margin-bottom: 70px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 95px 47px;
+
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 75px 47px;
+    }
+
+    @media (max-width: 756px) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 45px 47px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.features-banner {
+  .banner__title {
+    max-width: 715px;
+    margin: 0 auto 100px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 567px) {
+      margin-bottom: 25px;
+    }
+  }
+
+  .banner__wrapper {
+    margin-bottom: 175px;
+  }
+
+  &__image {
+    margin: 0 auto -175px;
+    max-width: 56%;
+
+    @media (max-width: 991px) {
+      max-width: 75%;
+    }
+
+    @media (max-width: 567px) {
+      max-width: 100%;
+    }
+  }
+}
