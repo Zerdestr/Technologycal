@@ -117,6 +117,7 @@ main {
   color: $white;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
   display: inline-block;
+  white-space: nowrap;
 
   &:hover {
     background-color: $lilac;
@@ -148,11 +149,11 @@ main {
   color: $dark;
 
   @media (max-width: 991px) {
-    font-size: 40px;
+    font-size: 45px;
   }
 
   @media (max-width: 756px) {
-    font-size: 35px;
+    font-size: 40px;
   }
 
   @media (max-width: 567px) {
@@ -208,26 +209,40 @@ main {
 
   &__wrapper {
     max-width: 1720px;
+    width: 100%;
     margin: 0 auto;
-    background-image: url("../img/top-bg.png");
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: contain;
-    background-size: 1720px 868px;
     text-align: center;
     border-radius: 20px;
     padding: 129px 15px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      max-width: 1720px;
+      max-height: 734px;
+      width: calc(100% - 30px);
+      height: 100%;
+      background-image: url("../img/top-bg.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      z-index: -1;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
     @media (max-width: 991px) {
       padding: 100px 15px;
     }
 
     @media (max-width: 756px) {
-      padding: 80px 15px;
+      padding: 60px 15px;
     }
 
     @media (max-width: 567px) {
-      padding: 60px 15px;
+      padding: 30px 15px;
     }
   }
 
@@ -237,17 +252,18 @@ main {
     line-height: 1.1;
     color: $white;
     margin-bottom: 18px;
+    padding: 0 15px;
 
     @media (max-width: 991px) {
-      font-size: 50px;
+      font-size: 55px;
     }
 
     @media (max-width: 756px) {
-      font-size: 40px;
+      font-size: 50px;
     }
 
     @media (max-width: 567px) {
-      font-size: 30px;
+      font-size: 40px;
     }
   }
 
@@ -256,6 +272,7 @@ main {
     color: $white;
     max-width: 465px;
     margin: 0 auto;
+    padding: 0 15px;
   }
 }
 

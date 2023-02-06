@@ -13,7 +13,7 @@
 
       </div>
 
-      <a class="button" href="#">Contact Us</a>
+      <a class="button" href="contact.html">Contact Us</a>
     </div>
 
     <div class="video__image">
@@ -33,12 +33,18 @@
 
       </button>
     </div>
+
     <div class="video__video">
 
-      <iframe class="video__iframe" width="560" height="315" src="https://www.youtube.com/embed/ck1vYOosv6I"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+      <div id="videoContainer" class="video__video-wrapper">
+
+        <iframe class="video__iframe" width="560" height="315" src="https://www.youtube.com/embed/ck1vYOosv6I"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+
+        <button class="video__close" type="button"></button>
+      </div>
     </div>
   </div>
 </section>

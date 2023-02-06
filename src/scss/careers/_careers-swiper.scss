@@ -1,0 +1,33 @@
+.careers-swiper {
+  margin-bottom: 200px;
+
+  @media (max-width: 991px) {
+    margin-bottom: 160px;
+  }
+
+  @media (max-width: 756px) {
+    margin-bottom: 120px;
+  }
+
+  @media (max-width: 567px) {
+    margin-bottom: 70px;
+  }
+
+  .container {
+    background-color: $grey-light;
+    padding: 160px 105px;
+    border-radius: 20px;
+
+    @media (max-width: 991px) {
+      padding: 120px 80px;
+    }
+
+    @media (max-width: 756px) {
+      padding: 80px 60px;
+    }
+
+    @media (max-width: 567px) {
+      padding: 40px 20px;
+    }
+  }
+}

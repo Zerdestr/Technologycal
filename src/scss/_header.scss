@@ -9,6 +9,18 @@
   &--fixed {
     padding: 10px 0;
     border-bottom: 2px solid $lilac;
+
+    .header__sign-in {
+      padding: 15px 42px;
+
+      @media (max-width: 991px) {
+        padding: 15px 30px;
+      }
+
+      @media (max-width: 756px) {
+        padding: 10px 20px;
+      }
+    }
   }
 
   @media (max-width: 991px) {
@@ -57,6 +69,35 @@
 
     @media (max-width: 991px) {
       transform: translateY(0);
+      top: 45px;
+      opacity: 1;
+    }
+  }
+
+  &__submenu-link {
+    background-color: $white;
+    border: 1px solid $lilac;
+    border-radius: 20px;
+    display: block;
+    padding: 0 10px;
+
+    &:hover {
+      color: $lilac;
+      transition: color 0.2s ease;
+    }
+
+    &:focus {
+      outline: 2px solid $lilac;
+      border-radius: 10px;
+    }
+
+    &:active {
+      opacity: 0.75;
+    }
+
+    @media (max-width: 991px) {
+      background-color: inherit;
+      border: 1px solid $lilac;
     }
   }
 
@@ -105,9 +146,6 @@
   }
 
   &__item {
-    display: flex;
-    flex-direction: column;
-
     &--active {
       .header__link-number {
         color: $lilac;
@@ -123,6 +161,10 @@
       }
     }
 
+    @media (max-width: 567px) {
+      text-align: center;
+    }
+
     @media (max-width: 991px) {
       width: 100%;
       align-items: center;
@@ -131,6 +173,7 @@
 
   &__item-submenu {
     position: relative;
+    transition: height 0.2s ease-in-out;
 
     &--active {
       .header__item-icon {
@@ -157,13 +200,13 @@
       }
     }
 
+    @media (max-width: 991px) {
+      overflow: hidden;
+    }
+
     .header__link--submenu {
       position: relative;
       padding-right: 16.5px;
-    }
-
-    @media (max-width: 991px) {
-      transition: padding-bottom 0.2s ease-in-out;
     }
   }
 
@@ -173,7 +216,7 @@
     top: 57%;
     transform: translateY(-50%);
     font-size: 6.5px;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.1s ease-in-out;
   }
 
   &__link {
@@ -195,6 +238,10 @@
     @media (max-width: 991px) {
       max-width: max-content;
     }
+
+    @media (max-width: 567px) {
+      margin: 0 auto;
+    }
   }
 
   &__link-number {
@@ -211,7 +258,8 @@
     line-height: 1.39;
     border: 1px solid $grey-border;
     border-radius: 62px;
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, padding 0.2s ease-in-out;
+    white-space: nowrap;
 
     &:hover {
       background-color: $lilac;

@@ -1,0 +1,15 @@
+.pricing-single-banner {
+  margin-bottom: 200px;
+
+  @media (max-width: 991px) {
+    margin-bottom: 160px;
+  }
+
+  @media (max-width: 756px) {
+    margin-bottom: 120px;
+  }
+
+  @media (max-width: 567px) {
+    margin-bottom: 70px;
+  }
+}

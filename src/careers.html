@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/_head.html', {
+"title":"Technologycal | Careers"
+})
+
+<body>
+
+  <div class="wrapper">
+    @@include('html/_header.html',{
+    "hrefHome": "href='index.html'",
+    "hrefBlog": "href='blog.html'",
+    "hrefPricing": "href='pricing.html'",
+    "hrefFetures": "href='features.html'",
+    "homeItemActive": '',
+    "feturesItemActive": '',
+    "pricingItemActive": '',
+    "resourcesItemActive": '',
+    "blogItemActive": '',
+    })
+    <main>
+
+      @@include('html/careers/_careers-banner.html',{})
+      @@include('html/careers/_careers.html',{})
+      @@include('html/careers/_contact.html',{})
+      @@include('html/careers/_careers-swiper.html',{})
+
+
+    </main>
+    @@include('html/_footer.html',{
+    "hrefHome": "href='index.html'",
+    "hrefAbout": "href='about.html'",
+    "hrefContact": "href='contact.html'",
+    "hrefBlog": "href='blog.html'",
+    "hrefBlogPost": "href='blog-single.html'",
+    "hrefPricing": "href='pricing.html'",
+    "hrefPricingSingle": "href='pricing-single.html'",
+    "hrefCareers": "",
+    "hrefCareersSingle": "href='careers-single.html'",
+    "hrefCaseStudies": "href='case-study.html'",
+    "hrefCaseStudySingle": "href='case-study-single.html'",
+    "hrefPasswordProtected": "href='password-protected.html'",
+    "404": "href='404.html'",
+    })
+
+  </div>
+
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

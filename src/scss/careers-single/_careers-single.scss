@@ -1,0 +1,150 @@
+.careers-single {
+  margin-bottom: 193px;
+
+  @media (max-width: 991px) {
+    margin-bottom: 150px;
+  }
+
+  @media (max-width: 756px) {
+    margin-bottom: 110px;
+  }
+
+  @media (max-width: 567px) {
+    margin-bottom: 70px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 15px;
+
+    @media (max-width: 756px) {
+      flex-direction: column;
+      row-gap: 40px;
+    }
+  }
+
+  &__info {
+    max-width: 782px;
+  }
+
+  &__responsibilities {
+    margin-bottom: 35px;
+  }
+
+  &__responsibilities-title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.1;
+    color: $dark;
+    margin-bottom: 32px;
+
+    @media (max-width: 991px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 756px) {
+      font-size: 35px;
+    }
+
+    @media (max-width: 567px) {
+      font-size: 30px;
+    }
+  }
+
+  &__text {
+    p {
+      &:not(:last-child) {
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  &__list {
+    margin: 30px 0 44px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__item-icon {
+    color: $lilac;
+    font-size: 11px;
+    margin-right: 16px;
+    background-color: $grey-light;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+  }
+
+  &__img {
+    margin-top: 40px;
+    max-width: 782px;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__requirements-title {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 1.1;
+    color: $dark;
+    margin-bottom: 22px;
+
+    @media (max-width: 991px) {
+      font-size: 35px;
+    }
+
+    @media (max-width: 756px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 567px) {
+      font-size: 25px;
+    }
+  }
+
+  &__apply {
+    max-width: 550px;
+    background-color: $grey-light;
+    border-radius: 20px;
+    padding: 64px 62px;
+    height: max-content;
+    margin: 0 auto;
+
+    .careers-single__text {
+      margin-bottom: 35px;
+    }
+
+    @media (max-width: 991px) {
+      padding: 44px 42px;
+    }
+
+    @media (max-width: 756px) {
+      padding: 34px 32px;
+    }
+
+    @media (max-width: 567px) {
+      padding: 24px 22px;
+    }
+  }
+
+  &__apply-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.1;
+    color: $dark;
+    margin-bottom: 23px;
+  }
+}

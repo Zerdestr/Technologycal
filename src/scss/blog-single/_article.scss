@@ -21,6 +21,10 @@
   &__text {
     margin-bottom: 88px;
 
+    @media (max-width: 756px) {
+      margin-bottom: 50px;
+    }
+
     @media (max-width: 567px) {
       margin-bottom: 30px;
     }
